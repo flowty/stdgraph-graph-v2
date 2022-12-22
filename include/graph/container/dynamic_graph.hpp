@@ -373,6 +373,8 @@ public:
   constexpr value_type&       value() noexcept { return value_; }
   constexpr const value_type& value() const noexcept { return value_; }
 
+  void set_value(value_type value) { value_ = value; }
+
 private:
   value_type value_ = value_type();
 
@@ -754,6 +756,8 @@ public:
 
   constexpr value_type&       value() noexcept { return value_; }
   constexpr const value_type& value() const noexcept { return value_; }
+
+  void set_value(value_type value) {value_ = value;}
 
 private:
   value_type value_ = value_type();
