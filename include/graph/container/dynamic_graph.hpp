@@ -225,7 +225,7 @@ public:
   constexpr dynamic_edge_target& operator=(dynamic_edge_target&&)      = default;
 
 public:
-  //constexpr vertex_id_type target_id() const { return target_id_; }
+  constexpr vertex_id_type target_id() const { return target_id_; }
   //constexpr vertex_id_type source_id() const { return source_id_; }
 
 private:
