@@ -902,7 +902,7 @@ public: // Construction/Destruction/Assignment
   dynamic_graph_base(ERng&& erng, VRng&& vrng, EProj eproj, VProj vproj, vertex_allocator_type alloc)
         : vertices_(alloc) {
     load_vertices(vrng, vproj);
-    load_edges(vertices_.size(), 0, erng, eproj);
+    load_edges(erng, eproj);
   }
 
   /**
