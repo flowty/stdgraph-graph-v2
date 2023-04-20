@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cassert>
+
 namespace std::graph {
 
 // Common types for DFS & BFS views

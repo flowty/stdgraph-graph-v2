@@ -2,6 +2,7 @@
 
 #include "graph/graph.hpp"
 #include "graph/views/incidence.hpp"
+#include <functional>
 #include <queue>
 
 namespace std::graph {

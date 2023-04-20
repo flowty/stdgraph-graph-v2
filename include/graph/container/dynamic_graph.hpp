@@ -1,11 +1,13 @@
 #pragma once
 
+#include <cassert>
 #include <concepts>
 #include <vector>
 #include <forward_list>
 #include <list>
 #include "graph/graph.hpp"
 #include "container_utility.hpp"
+#include "graph/graph_utility.hpp"
 
 // load_vertices(vrng, vvalue_fnc) -> [uid,vval]
 //
