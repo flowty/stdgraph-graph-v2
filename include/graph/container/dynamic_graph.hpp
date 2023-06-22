@@ -287,7 +287,7 @@ public:
   constexpr dynamic_edge_source& operator=(dynamic_edge_source&&)      = default;
 
 public:
-  //constexpr vertex_id_type source_id() const { return source_id_; }
+  constexpr vertex_id_type source_id() const { return source_id_; }
   //constexpr vertex_id_type source_id() const { return source_id_; }
 
 private:
