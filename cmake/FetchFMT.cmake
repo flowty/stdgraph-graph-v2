@@ -18,6 +18,7 @@ endif()
 
 set(FMT_SOURCE_DIR "${fmt_SOURCE_DIR}")
 set(FMT_INCLUDE_DIR "${fmt_INCLUDE_DIR}")
+set(FMT_BINARY_DIR "${fmt_BINARY_DIR}")
 
 FetchContent_MakeAvailable(fmt)
-add_subdirectory(${fmt_SOURCE_DIR})
+add_subdirectory(${fmt_SOURCE_DIR} ${fmt_BINARY_DIR})
