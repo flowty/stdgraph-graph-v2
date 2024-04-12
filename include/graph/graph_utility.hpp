@@ -4,6 +4,8 @@
 #include <tuple>
 #include <vector>
 
+#include <cassert>
+
 namespace std::graph {
 
 // Common types for DFS & BFS views
