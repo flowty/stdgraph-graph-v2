@@ -1,11 +1,13 @@
 #pragma once
 
+#include <cassert>
 #include <concepts>
 #include <vector>
 #include <forward_list>
 #include <list>
 #include "graph/graph.hpp"
 #include "container_utility.hpp"
+#include "graph/graph_utility.hpp"
 
 // load_vertices(vrng, vvalue_fnc) -> [uid,vval]
 //
@@ -225,7 +227,7 @@ public:
   constexpr dynamic_edge_target& operator=(dynamic_edge_target&&)      = default;
 
 public:
-  //constexpr vertex_id_type target_id() const { return target_id_; }
+  constexpr vertex_id_type target_id() const { return target_id_; }
   //constexpr vertex_id_type source_id() const { return source_id_; }
 
 private:
@@ -285,7 +287,7 @@ public:
   constexpr dynamic_edge_source& operator=(dynamic_edge_source&&)      = default;
 
 public:
-  //constexpr vertex_id_type source_id() const { return source_id_; }
+  constexpr vertex_id_type source_id() const { return source_id_; }
   //constexpr vertex_id_type source_id() const { return source_id_; }
 
 private:
@@ -372,6 +374,8 @@ public:
 public:
   constexpr value_type&       value() noexcept { return value_; }
   constexpr const value_type& value() const noexcept { return value_; }
+
+  void set_value(value_type value) { value_ = value; }
 
 private:
   value_type value_ = value_type();
@@ -745,6 +749,8 @@ public:
   constexpr value_type&       value() noexcept { return value_; }
   constexpr const value_type& value() const noexcept { return value_; }
 
+  void set_value(value_type value) {value_ = value;}
+
 private:
   value_type value_ = value_type();
 
@@ -888,7 +894,7 @@ public: // Construction/Destruction/Assignment
   dynamic_graph_base(ERng&& erng, VRng&& vrng, EProj eproj, VProj vproj, vertex_allocator_type alloc)
         : vertices_(alloc) {
     load_vertices(vrng, vproj);
-    load_edges(vertices_.size(), 0, erng, eproj);
+    load_edges(erng, eproj);
   }
 
   /**
