@@ -5,6 +5,8 @@
 #include <vector>
 #include "graph/edgelist.hpp"
 
+#include <cassert>
+
 namespace graph {
 
 // Common types for DFS & BFS views

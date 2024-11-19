@@ -1,4 +1,4 @@
-﻿# CMakeList.txt : Top-level CMake project file, do global configuration
+# CMakeList.txt : Top-level CMake project file, do global configuration
 # and include sub-projects here.
 #
 cmake_minimum_required (VERSION 3.20)
@@ -79,10 +79,10 @@ endif()
 
 
 # Add libraries. Order is important based on dependencies.
-include(${PROJECT_SOURCE_DIR}/cmake/FetchFMT.cmake)
-include(${PROJECT_SOURCE_DIR}/cmake/FetchCatch.cmake)
-include(${PROJECT_SOURCE_DIR}/cmake/FetchDocopt.cmake)
-include(${PROJECT_SOURCE_DIR}/cmake/FetchCSVParser.cmake)
+#include(${PROJECT_SOURCE_DIR}/cmake/FetchFMT.cmake)
+#include(${PROJECT_SOURCE_DIR}/cmake/FetchCatch.cmake)
+#include(${PROJECT_SOURCE_DIR}/cmake/FetchDocopt.cmake)
+#include(${PROJECT_SOURCE_DIR}/cmake/FetchCSVParser.cmake)
 #include(${PROJECT_SOURCE_DIR}/cmake/FetchRange.cmake)
 #include(${PROJECT_SOURCE_DIR}/cmake/FetchSPDLog.cmake)
 #include(${PROJECT_SOURCE_DIR}/cmake/FetchBoost.cmake)
